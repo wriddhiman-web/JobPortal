@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobPortal - Post / Edit Job</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body data-page="post-job">
+    <header><nav id="main-nav"></nav></header>
+
+    <main class="container" style="max-width: 640px;">
+        <div id="flash-message"></div>
+
+        <div class="card">
+            <h2 id="page-title" style="margin-bottom: 1.25rem;">Create a Job Posting</h2>
+            <form id="post-job-form">
+                <div class="form-group">
+                    <label for="job-title">Job Title *</label>
+                    <input type="text" id="job-title" required placeholder="e.g. Senior Software Engineer">
+                </div>
+                <div class="form-group">
+                    <label for="job-company">Company Name *</label>
+                    <input type="text" id="job-company" required placeholder="e.g. Acme Corp">
+                </div>
+                <div class="form-group">
+                    <label for="job-location">Location *</label>
+                    <input type="text" id="job-location" required placeholder="e.g. New York, NY or Remote">
+                </div>
+                <div class="form-group">
+                    <label for="job-type">Employment Type *</label>
+                    <select id="job-type" required>
+                        <option value="Full-time">Full-time</option>
+                        <option value="Part-time">Part-time</option>
+                        <option value="Contract">Contract</option>
+                        <option value="Remote">Remote</option>
+                        <option value="Internship">Internship</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="job-salary">Salary Range *</label>
+                    <input type="text" id="job-salary" required placeholder="e.g. $100k - $125k or $50/hr">
+                </div>
+                <div class="form-group">
+                    <label for="job-desc">Job Description *</label>
+                    <textarea id="job-desc" rows="6" required placeholder="Describe responsibilities, qualifications, and benefits..."></textarea>
+                </div>
+                <div style="display: flex; gap: 0.5rem;">
+                    <button type="submit" id="post-submit-btn" class="btn">Publish Job</button>
+                    <a href="index.html" class="btn btn-outline">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
